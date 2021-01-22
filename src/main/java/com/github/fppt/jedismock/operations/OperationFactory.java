@@ -28,6 +28,7 @@ public class OperationFactory {
         TRANSACTIONAL_OPERATIONS.put("pexpire", RO_pexpire::new);
         TRANSACTIONAL_OPERATIONS.put("incr", RO_incr::new);
         TRANSACTIONAL_OPERATIONS.put("incrby", RO_incrby::new);
+        TRANSACTIONAL_OPERATIONS.put("incrbyfloat", RO_incrbyfloat::new);
         TRANSACTIONAL_OPERATIONS.put("decr", RO_decr::new);
         TRANSACTIONAL_OPERATIONS.put("decrby", RO_decrby::new);
         TRANSACTIONAL_OPERATIONS.put("pfcount", RO_pfcount::new);
@@ -54,6 +55,7 @@ public class OperationFactory {
         TRANSACTIONAL_OPERATIONS.put("publish", RO_publish::new);
         TRANSACTIONAL_OPERATIONS.put("flushall", RO_flushall::new);
         TRANSACTIONAL_OPERATIONS.put("flushdb", RO_flushdb::new);
+        TRANSACTIONAL_OPERATIONS.put("dbsize", RO_dbsize::new);
         TRANSACTIONAL_OPERATIONS.put("lrem", RO_lrem::new);
         TRANSACTIONAL_OPERATIONS.put("ping", RO_ping::new);
         TRANSACTIONAL_OPERATIONS.put("keys", RO_keys::new);
@@ -63,12 +65,17 @@ public class OperationFactory {
         TRANSACTIONAL_OPERATIONS.put("spop", RO_spop::new);
         TRANSACTIONAL_OPERATIONS.put("srem", RO_srem::new);
         TRANSACTIONAL_OPERATIONS.put("scard", RO_scard::new);
+        TRANSACTIONAL_OPERATIONS.put("sismember", RO_sismember::new);
         TRANSACTIONAL_OPERATIONS.put("hexists", RO_hexists::new);
         TRANSACTIONAL_OPERATIONS.put("hget", RO_hget::new);
         TRANSACTIONAL_OPERATIONS.put("hset", RO_hset::new);
         TRANSACTIONAL_OPERATIONS.put("hdel", RO_hdel::new);
         TRANSACTIONAL_OPERATIONS.put("hkeys", RO_hkeys::new);
+        TRANSACTIONAL_OPERATIONS.put("hvals", RO_hvals::new);
+        TRANSACTIONAL_OPERATIONS.put("hlen", RO_hlen::new);
         TRANSACTIONAL_OPERATIONS.put("hgetall", RO_hgetall::new);
+        TRANSACTIONAL_OPERATIONS.put("hincrby", RO_hincrby::new);
+        TRANSACTIONAL_OPERATIONS.put("hincrbyfloat", RO_hincrbyfloat::new);
         TRANSACTIONAL_OPERATIONS.put("sinter", RO_sinter::new);
         TRANSACTIONAL_OPERATIONS.put("hmget", RO_hmget::new);
         TRANSACTIONAL_OPERATIONS.put("hmset", RO_hmset::new);
@@ -80,7 +87,9 @@ public class OperationFactory {
         TRANSACTIONAL_OPERATIONS.put("zadd", RO_zadd::new);
         TRANSACTIONAL_OPERATIONS.put("zcard", RO_zcard::new);
         TRANSACTIONAL_OPERATIONS.put("zrange", RO_zrange::new);
+        TRANSACTIONAL_OPERATIONS.put("zrangebylex", RO_zrangebylex::new);
         TRANSACTIONAL_OPERATIONS.put("zrem", RO_zrem::new);
+        TRANSACTIONAL_OPERATIONS.put("rename", RO_rename::new);
     }
 
 
